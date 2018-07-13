@@ -40,19 +40,21 @@ function init(params) {
     }
 
     function requestAllPostsCallBack(event) {
-        var request = event.target;
+        let request = event.target;
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status == 200) {
                 posts = [];
-                var postsData = JSON.parse(request.responseText);
+                let postsData = JSON.parse(request.responseText);
+                
                 for (const key in postsData) {
-                    var postData = postsData[key];
-                    var editable = false;
+                    let postData = postsData[key];
+                    let editable = false;
                     if (postData.owner === owner) {
                         editable = true;
                     }
                     // var date = new Date(postData.timestamp);
-                    var post = new Post(key, postData.title, postData.body, postData.owner, postData.timestamp, editable);
+                    let post = new Post(key, postData.title, postData.body, postData.owner, postData.timestamp, editable);
+                    console.log(post);                    
                     posts.push(post);
                 }
                 showPosts();
