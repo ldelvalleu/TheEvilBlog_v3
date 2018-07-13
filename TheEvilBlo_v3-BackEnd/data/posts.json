@@ -1,0 +1,89 @@
+{
+	"posts": {
+		"-LE_soujZTBrpZjJxNJK": {
+			"body": "Hola a todos, espero que se encuentren muy bien.\nAquí voy a estar escribiendo las notas para el examen, así que por favor no borren este post. ",
+			"editable": true,
+			"owner": "Esteban",
+			"replies": [
+				{
+					"body": "Espero que sea muy educativo para todos.\nSaludos.",
+					"owner": "Esteban",
+					"timestamp": "2018-06-09T22:35:43.913Z"
+				},
+				{
+					"body": "Espero que sea muy educativo para todos.\nSaludos.",
+					"owner": "Esteban",
+					"timestamp": "2018-06-09T22:35:43.913Z"
+				},
+				{
+					"body": "Espero que sea muy educativo para todos.\nSaludos.",
+					"owner": "Juan",
+					"timestamp": "2018-06-09T22:35:43.913Z"
+				}
+			],
+			"timestamp": "2018-06-10T01:43:14.787Z",
+			"title": "Instrucciones para el examen #1."
+		},
+		"-LEaArceYzhj4VUjaJqc": {
+			"body": "Creates a JavaScript Date instance that represents a single moment in time. Date objects are based on a time value that is the number of milliseconds since 1 January 1970 UTC.",
+			"editable": false,
+			"owner": "JavaScript",
+			"replies": [
+				{
+					"body": "Muy practico y con muchas herramientas para trabajar con fechas.",
+					"owner": "Esteban",
+					"timestamp": "2018-06-10T04:11:11.542Z"
+				}
+			],
+			"timestamp": "2018-06-09T20:14:20.772Z",
+			"title": "Date"
+		},
+		"-LEaJ-Jlk6bYwkcqR2Sf": {
+			"body": "Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing. XMLHttpRequest is used heavily in Ajax programming.",
+			"editable": true,
+			"owner": "Mozilla",
+			"timestamp": "2018-06-09T20:49:53.493Z",
+			"title": "XMLHttpRequest"
+		},
+		"-LEaKC8onC5M9adDsKWZ": {
+			"body": "The HyperText Transfer Protocol (HTTP) is the underlying network protocol that enables transfer of hypermedia documents on the Web, typically between a browser and a server so that humans can read them. The current version of the HTTP specification is called HTTP/2.",
+			"editable": true,
+			"owner": "Mozilla",
+			"timestamp": "2018-06-09T20:55:08.222Z",
+			"title": "HTTP"
+		},
+		"-LEaKProHNYr9c38B1Hl": {
+			"body": "HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes: informational responses, successful responses, redirects, client errors, and servers errors.\n\nhttps://developer.mozilla.org/en-US/docs/Web/HTTP/Status",
+			"editable": false,
+			"owner": "Mozilla",
+			"replies": [
+				{
+					"body": "200 OK\nThe request has succeeded. The meaning of a success varies depending on the HTTP method:\nGET: The resource has been fetched and is transmitted in the message body.\nHEAD: The entity headers are in the message body.\nPUT or POST: The resource describing the result of the action is transmitted in the message body.\nTRACE: The message body contains the request message as received by the server",
+					"owner": "Esteban",
+					"timestamp": "2018-06-09T21:16:35.510Z"
+				},
+				{
+					"body": "201 Created\nThe request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
+					"owner": "Esteban",
+					"timestamp": "2018-06-09T21:25:23.882Z"
+				}
+			],
+			"timestamp": "2018-06-09T20:56:04.688Z",
+			"title": "HTTP response status codes"
+		},
+		"-LEbQ_-ic6fzb4eYMpgW": {
+			"body": "Usa el botón redondo con un símbolo de mas para abrir el formulario de agregar post.\n\n1. Agregar un titulo.\n2. Agregar el mensaje del post.\n\nUna ves que has terminado de escribir tu post has click en el botón Post.",
+			"editable": true,
+			"owner": "Esteban",
+			"timestamp": "2018-06-10T04:31:22.227Z",
+			"title": "Como agregar un post nuevo."
+		},
+		"-LEbR2TJZ-Q7fLXxWApc": {
+			"body": "Si quieres hacer un comentario a un post de alguien más puedes utilizar el botón de reply para abrir el formulario para agregar reply.",
+			"editable": true,
+			"owner": "Esteban",
+			"timestamp": "2018-06-10T02:04:40.617Z",
+			"title": "Con hacer un reply a un post."
+		}
+	}
+}

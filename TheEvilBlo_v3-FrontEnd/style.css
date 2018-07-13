@@ -1,0 +1,126 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    max-width: 60em;
+    /*960/16*/
+    margin: 0 auto;
+    font-size: 1.4em;
+    background-color: #dddddd;
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+h1 {
+    color: gray;
+    font-size: 62px;
+    font-weight: 800;
+    line-height: 72px;
+    margin-top: 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: gray;
+    user-select: none;
+    pointer-events: none;
+}
+
+legend {
+    padding-top: 1.25em;
+    font-size: 0.6em;
+    user-select: none;
+    pointer-events: none;
+}
+
+.newPost {
+    width: 30em;
+    border: 0.3em dotted gray;
+    padding: 2em;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.contPost {
+    width: 30em;
+    padding: 2em;
+    margin: 0 auto;
+    margin-top: 4%;
+    background-color: #E5E5E5;
+    border: 0.3em dotted gray;
+}
+
+.pPosts {
+    color: gray;
+}
+
+p {
+    margin-top: 4%;
+    user-select: none;
+    pointer-events: none;
+}
+
+textarea {
+    margin-top: 1em;
+    height: 5em;
+    width: 100%;
+    border: 0.1em dotted gray;
+}
+
+input {
+    margin-top: 1em;
+    height: 1.9em;
+    width: 50%;
+    border: 0.1em dotted gray;
+}
+
+#btnPost1 {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: gray;
+    border: 2px dotted gray;
+    width: 100%;
+}
+
+#btnPost:hover {
+    border: 2px dotted #4CAF50;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.selectedPost {
+    background-color: rgb(115, 168, 116);
+}
