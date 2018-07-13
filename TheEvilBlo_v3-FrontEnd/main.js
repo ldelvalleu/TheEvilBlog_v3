@@ -44,7 +44,10 @@ function init(params) {
             if (request.status == 200) {
                 posts = [];
                 let postsData = JSON.parse(request.responseText);
-                
+
+                console.log(postsData);
+
+
                 for (const key in postsData) {
                     let postData = postsData[key];
                     let editable = false;
@@ -53,7 +56,7 @@ function init(params) {
                     }
                     // var date = new Date(postData.timestamp);
                     let post = new Post(key, postData.title, postData.body, postData.owner, postData.timestamp, editable);
-                    console.log(post);                    
+                    console.log(post);
                     posts.push(post);
                 }
                 showPosts();

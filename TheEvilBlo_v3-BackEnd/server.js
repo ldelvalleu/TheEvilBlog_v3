@@ -58,13 +58,13 @@ server.listen(port, localhost, () => {
 });
 
 function loadPosts() {
-    return new Promise((resolve, reject) => {        
+    return new Promise((resolve, reject) => {
         fs.readFile(path.resolve(process.cwd(), './data/posts.json'), (err, data) => {
             if (err) {
                 reject(null);
-            } else {    
+            } else {
                 posts = JSON.parse(data);
-                resolve(posts);
+                resolve(posts['posts']);
             }
         });
     });
@@ -102,15 +102,15 @@ function getPosts(request, response) {
 
     addCrossHeaders(request, response);
 
-    loadPosts().then((posts)=>{
-        response.writeHead(200,{
+    loadPosts().then((posts) => {
+        response.writeHead(200, {
             'Content-Type': 'application/json'
         });
 
         response.write(JSON.stringify(posts));
         response.end();
 
-    }).catch(()=>{
+    }).catch(() => {
         send404(request, response);
     });
 }
@@ -125,7 +125,7 @@ function postPost(request, response) {
     request.on('data', (chunk) => {
         buffer.push(chunk);
     });
-    
+
     request.on('end', () => {
 
         buffer = Buffer.concat(buffer).toString();
@@ -161,7 +161,7 @@ function updatePost(request, response) {
 
         buffer = Buffer.concat(buffer).toString();
         post = JSON.parse(buffer);
-        
+
         loadPosts().then((posts) => {
 
             for (const key in posts) {
@@ -185,7 +185,7 @@ function updatePost(request, response) {
 }
 
 function deletePost(request, response, key) {
-    
+
     addCrossHeaders(request, response);
 
     loadPosts().then((posts) => {
