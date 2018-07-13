@@ -1,0 +1,15 @@
+{
+  "name": "theevilblo_v3-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Luis Carlos Del Valle",
+  "license": "ISC",
+  "devDependencies": {
+    "uniqid": "^5.0.3"
+  }
+}
