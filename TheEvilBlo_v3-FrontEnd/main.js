@@ -19,7 +19,6 @@ function init(params) {
     // initFb();
     requestAllPosts();
 
-
     btnPost.hidden = false;
     btnUpdate.hidden = true;
     btnDelete.hidden = true;
@@ -108,7 +107,7 @@ function init(params) {
     //Start delete posts
     function deletePost(event) {
         if (confirm('¿Está seguro que desea eliminar el post?')) {
-            var url = 'https://theevilmouseblog.firebaseio.com/posts/' + selectedPostUi.post.fbKey + '.json';
+            var url = 'https://theevilmouseblog.firebaseio.com/posts/' + selectedPostUi.post.key + '.json';
             var request = new XMLHttpRequest();
             request.open('Delete', url, true);
             request.onreadystatechange = deletePostCallback;
@@ -143,9 +142,9 @@ function init(params) {
         post.title = txtTitle.value;
         post.body = txtBody.value;
         post.timestamp = new Date();
-        var fbKey = post.fbKey;
-        post.fbKey = null;
-        var postJson = '{' + JSON.stringify(fbKey) + ':' + JSON.stringify(post) + '}';
+        var key = post.key;
+        post.key = null;
+        var postJson = '{' + JSON.stringify(key) + ':' + JSON.stringify(post) + '}';
 
         console.log(postJson);
         request.send(postJson);

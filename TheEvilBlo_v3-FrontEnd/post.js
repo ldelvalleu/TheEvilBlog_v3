@@ -1,6 +1,6 @@
 class Post {
-    constructor(pFbkey, pTitle, pBody, pOwner, pTimeStamp, pEditable) {
-        this.fbKey = pFbkey;
+    constructor(key, pTitle, pBody, pOwner, pTimeStamp, pEditable) {
+        this.key = key;
         this.title = pTitle;
         this.body = pBody;
         this.owner = pOwner;
