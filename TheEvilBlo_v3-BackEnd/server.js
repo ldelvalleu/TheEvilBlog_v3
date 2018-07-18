@@ -64,7 +64,7 @@ function loadPosts() {
                 reject(null);
             } else {
                 posts = JSON.parse(data);
-                resolve(posts['posts']);
+                resolve(posts);
             }
         });
     });
