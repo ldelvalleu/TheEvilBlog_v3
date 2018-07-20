@@ -14,10 +14,11 @@ var server = http.createServer((request, response) => {
     path = path.replace(/^\/+|\/+$/g, '');
     let method = request.method;
     let query = parseUrl.query;
-    let key = query.key;
+    let key = query.query;
     let headers = request.headers;
     let buffer = '';
     let data = [];
+    console.log(query.query);
 
     console.log(path);
     console.log(method);
@@ -35,10 +36,10 @@ var server = http.createServer((request, response) => {
                     postPost(request, response);
                     break;
                 case 'PATCH':
-                    updatePost(request, response, key);
+                    updatePost(request, response);
                     break;
                 case 'DELETE':
-                    delelePost(request, response);
+                    deletePost(request, response, key);
                     break;
                 default:
                     console.log('Request not processed 1.');
@@ -168,6 +169,10 @@ function updatePost(request, response) {
         loadPosts().then((posts) => {
 
             for (const key in posts) {
+                console.log(key);
+                console.log(posts);
+
+
                 for (const keyToUpdate in post) {
                     if (key == keyToUpdate) {
                         posts[key] = post[key];

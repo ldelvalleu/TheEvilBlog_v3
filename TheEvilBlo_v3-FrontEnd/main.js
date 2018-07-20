@@ -112,7 +112,7 @@ function init(params) {
     //Start delete posts
     function deletePost(event) {
         if (confirm('¿Está seguro que desea eliminar el post?')) {
-            var url = 'https://theevilmouseblog.firebaseio.com/posts/' + selectedPostUi.post.key + '.json';
+            var url = urlBase + '/posts?query=' + selectedPostUi.post.key;
             var request = new XMLHttpRequest();
             request.open('Delete', url, true);
             request.onreadystatechange = deletePostCallback;
@@ -139,7 +139,7 @@ function init(params) {
 
     function updatePost(event) {
         var request = new XMLHttpRequest();
-        request.open('PATCH', urlBase, true);
+        request.open('PATCH', urlBase + '/posts', true);
         request.onreadystatechange = updatePostCallback;
         request.setRequestHeader('Content-Type', 'application/json;charset=utf-8');
 
