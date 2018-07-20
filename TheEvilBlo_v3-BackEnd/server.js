@@ -41,13 +41,13 @@ var server = http.createServer((request, response) => {
                     delelePost(request, response);
                     break;
                 default:
-                    console.log('Request not processed.');
+                    console.log('Request not processed 1.');
                     send404(request, response);
                     break;
             }
             break;
         default:
-            console.log('Request not processed.');
+            console.log('Request not processed 2.');
             send404(request, response);
             break;
     }
@@ -72,7 +72,7 @@ function loadPosts() {
 
 function savePosts(posts) {
     return new Promise((resolve, reject) => {
-        fs.readFile(path.resolve(process.cwd(), './data/posts.json'), (err) => {
+        fs.writeFile(path.resolve(process.cwd(), './data/posts.json'), JSON.stringify(posts), (err) => {
             if (err) {
                 reject();
             } else {
@@ -123,17 +123,20 @@ function postPost(request, response) {
     let post = null;
 
     request.on('data', (chunk) => {
+        console.log(chunk);
         buffer.push(chunk);
     });
 
     request.on('end', () => {
 
         buffer = Buffer.concat(buffer).toString();
-        buffer = JSON.parse(buffer);
+        post = JSON.parse(buffer);
 
         loadPosts().then((posts) => {
             posts[uniqid()] = post;
             savePosts(posts).then(() => {
+                console.log(posts);
+
                 response.writeHead(200);
                 response.end();
             }).catch(() => {
@@ -197,7 +200,6 @@ function deletePost(request, response, key) {
             response.end();
         }).catch(() => {
             send404(request, response);
-
         });
     }).catch(() => {
         send404(request, response);
@@ -221,4 +223,3 @@ function respondToOptions(request, response) {
     response.writeHead(200);
     response.end();
 }
-

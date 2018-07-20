@@ -90,7 +90,7 @@ function init(params) {
         posts.push(post);
 
         var request = new XMLHttpRequest();
-        request.open('POST', urlBase, true);
+        request.open('POST', urlBase + '/posts', true);
         request.setRequestHeader('Content-Type', 'application/json;charset=utf-8');
         request.onreadystatechange = sendPostCallBack;
         request.send(JSON.stringify(post));
