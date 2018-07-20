@@ -18,7 +18,7 @@ var server = http.createServer((request, response) => {
     let headers = request.headers;
     let buffer = '';
     let data = [];
-    console.log(query.query);
+    // console.log(query.query);
 
     console.log(path);
     console.log(method);
